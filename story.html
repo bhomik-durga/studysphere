@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story - NovelSphere Lite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6 flex flex-col items-center">
+  <div id="storyContainer" class="bg-white shadow-lg rounded-2xl p-6 max-w-3xl"></div>
+
+  <script>
+    const stories = {
+      1: {
+        title: "The Lost Kingdom",
+        author: "Arjun Mehta",
+        date: "2023-08-12",
+        content: "Centuries ago, beyond the deserts and shifting dunes, there thrived a kingdom unlike any other. The Lost Kingdom of Zarathos was built on the edge of an oasis so vast that travelers believed it to be an inland sea. Its towers of sandstone gleamed gold in the sun, and its libraries held knowledge said to rival the wisdom of the stars.Yet greed and ambition became its undoing. Legend tells of a king who sought immortality, striking bargains with wandering mystics and summoning forces beyond his comprehension. When the people rebelled against his tyranny, a curse swept across Zarathos. In one night of blinding storms and howling winds, the kingdom vanished beneath the sands, leaving only whispers carried by the desert breeze.for generations, merchants spoke of glimpses of golden spires at the horizon during rare mirages. Nomads claimed to find fragments of carvings buried beneath dunes, etched with strange runes that glowed faintly under the moonlight. Scholars dismissed these as tales, yet treasure hunters continued their perilous journeys, vanishing without trace.But the truth is not so easily forgotten. Beneath layers of shifting sand lies an empire asleep, its streets intact, its wells still flowing, and its secrets sealed within obsidian gates. Some say the kingdom waits for one worthy soul to awaken it—not to restore its glory, but to learn from its folly.And so, every grain of sand that blows across the desert carries a story: of arrogance, of loss, and of a people who reached too high. The Lost Kingdom is not merely a ruin hidden in time—it is a reminder that even the grandest empires can vanish in a single breath of the wind."
+      },
+      2: {
+        title: "Whispers of the Forest",
+        author: "Priya Sharma",
+        date: "2022-11-05",
+        content: "Deep within an ancient forest, whispers of spirits... (full story text goes here)"
+      },
+      3: {
+        title: "Echoes of Tomorrow",
+        author: "Rohan Das",
+        date: "2024-02-19",
+        content: "In a world where dreams can be programmed... (full story text goes here)"
+      },
+      4: {
+        title: "THE BOY WHO BENT TIME",
+        author: "JOSE MASSUCHUETS",
+        date: "2014-05-29",
+        content: "My name is Ethan Cruz, and I am nineteen years old. To my family, I am simply their son. To my friends, I am just another restless teenager. But in truth, I have done something no one else has ever achieved. I have walked in a world that ended millions of years before the first human ever breathed. I have bent time itself.It began when I was six. In the dust-choked attic of my late grandfather’s house, I discovered a small wooden chest. Inside lay a collection of worn notebooks, their pages filled with impossibly complex equations—symbols that seemed alive with hidden meaning. At the bottom, buried beneath the papers, was an envelope sealed with wax and addressed to me.“Ethan, if you are reading this, then you have inherited my curiosity. These fragments are the beginnings of something greater. Use them wisely. And beware—this knowledge is not without consequence.”At that age, the equations were beyond me. But the words lit a spark that would never fade.As I grew, I devoured everything I could find—physics, quantum mechanics, relativity. While my parents dreamed of me becoming a businessman, I poured every waking moment into science. By fourteen, my grandfather’s mysterious notes began to reveal their secrets. By seventeen, I had decoded most of his work and woven it together with my own research. And by eighteen, hidden away in my garage, I completed what he had begun: the first working prototype of a time machine.My plan was modest. I wanted to skip forward one day—to prove the theory worked without risk. But the universe has little regard for human plans. In my nervous excitement, I entered the wrong sequence. The machine howled, light consumed me, and in an instant, I was torn from the world I knew.When the dizziness passed, I stood in a land that belonged to another age. The air was heavy and wet, humming with the drone of insects. Towering ferns arched overhead. Rivers the color of steel wound through endless swamps. For a fleeting heartbeat, I believed I had stumbled into a dream. Then the ground trembled.From the water emerged a monster of impossible scale—its long jaws lined with teeth built for rending flesh, its spine crowned with a vast sail that glistened in the sun. A Spinosaurus, the largest carnivorous dinosaur ever to walk the earth.It had not seen me yet. But when its golden eyes fixed on my figure, the illusion of wonder shattered into raw terror. The beast lunged.I ran. The forest erupted around me as its massive body crashed through the undergrowth. Each footfall shook the earth, sending shockwaves through my chest. I darted between trees, scrambled over roots, and threw myself into the shadows, my pulse a drumbeat of panic. For agonizing minutes, I crouched in silence as the creature searched. Its snout pressed into the ferns mere yards away before it finally withdrew to the river.I wandered that ancient world for hours—perhaps days, though time itself seemed to lose meaning. I saw herds of Argentinosaurus, their massive bodies blotting out the horizon. Above me, Pteranodons soared, their wings carving shadows across the canopy. It was a world both alien and familiar: beautiful, savage, eternal.But beauty could not conceal the truth. I did not belong there. And if I stayed, I would die there.At last, buried beneath vines and mud, I found salvation—my machine, half-broken but intact. With trembling hands, I clawed it free, climbed inside, and fought to reactivate its systems. The console sputtered, sparks dancing across the controls. Behind me, the forest trembled once more. The Spinosaurus had returned.Its roar split the air as it charged. I struck the final command, and the machine erupted with light. The last thing I saw was its jaws closing around the capsule as the world dissolved.When I opened my eyes, I was lying in my backyard. The grass was cool beneath me. The machine smoked at my side. For a moment, I believed I had only dreamed. But then I saw the poster stapled to a lamppost across the street:MISSING PERSON: ETHAN CRUZ. Last seen August 22, 2024.I had been gone for two weeks. To my family, I had vanished without a trace. When I staggered through the front door, my mother collapsed into my arms, sobbing with relief. They asked me where I had been. I told them nothing. The truth would only bring fear—and perhaps worse.That night, I returned to my grandfather’s notebooks. And there, hidden in faint pencil at the bottom of a page, I found a line I had never seen before:“The first journey is only the beginning. Guard the machine well. Others will come for it. And they must never succeed.”The words chilled me. My invention was not an accident, nor was it mine alone. My grandfather had left me more than knowledge. He had left me a burden.Now, each night as I close my eyes, I still hear the roar of the Spinosaurus, echoing across time. My machine sits locked away, broken but not dead. And deep down, I know my journey is not over. It has only just begun."
+      }
+    };
+
+    // Get story ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const story = stories[id];
+    const container = document.getElementById("storyContainer");
+
+    if (story) {
+      container.innerHTML = `
+        <h1 class="text-3xl font-bold text-indigo-600 mb-2">${story.title}</h1>
+        <p class="text-gray-600">By ${story.author}</p>
+        <p class="text-sm text-gray-500 mb-4">Published: ${story.date}</p>
+        <p class="text-gray-700 leading-relaxed">${story.content}</p>
+        <a href="stories.html" class="mt-6 inline-block text-indigo-600 hover:underline">← Back to Stories</a>
+      `;
+    } else {
+      container.innerHTML = `<p class="text-red-500">Story not found.</p>`;
+    }
+  </script>
+</body>
+</html>
